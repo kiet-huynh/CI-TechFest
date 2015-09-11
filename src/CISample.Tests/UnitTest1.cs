@@ -1,12 +1,11 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace CISample.Tests
+﻿namespace CISample.Tests
 {
-    [TestClass]
+    using NUnit.Framework;
+
+    [TestFixture]
     public class UnitTest1
     {
-        [TestMethod]
+        [Test]
         public void TestMethod1()
         {
         }
