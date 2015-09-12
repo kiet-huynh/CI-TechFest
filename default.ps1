@@ -51,6 +51,14 @@ task UnitTest -depends Compile {
 		
 	# Add any additional tests here as needed
     .$runner $src\CISample.Tests\bin\$configuration\CISample.Tests.dll /framework:net-4.5 /noshadow  /nologo /nodots /xml:$test_results\CISample.Tests.xml
+
+    if ($lastexitcode -gt 0) {
+      throw "{0} unit test{1} failed." -f $lastexitcode,(& { if ($lastexitcode -eq 1) { "" } else { "s" } })
+    }
+
+    if ($lastexitcode -lt 0) {
+      throw "Unit test run was terminated by a fatal error."
+    }
 }
 
 function global:create_directory($directory_name) {
