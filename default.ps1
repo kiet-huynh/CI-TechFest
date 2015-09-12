@@ -11,7 +11,7 @@ $sln = "$src\CISample.sln"
 $deploy_proj = "$src\CISample.UI\CISample.UI.csproj"
 $test_results = "$basedir\TestResults"
 
-$packageVersion = 1.0.0.1
+$packageVersion = 1.0.0.0
 $octopusPackageDir = "$publish_dir\packages"
 
 task default -depends UnitTest
