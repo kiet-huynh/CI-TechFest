@@ -17,11 +17,11 @@
             Assert.IsTrue(true);
         }
 
-        //[Test]
-        //public void Should_Fail_Test()
-        //{
-        //    Assert.IsTrue(false);
-        //}
+        [Test]
+        public void Should_Fail_Test()
+        {
+            Assert.IsTrue(false);
+        }
 
         [Test]
         public void Should_Texans_Win_Total_Be_Over_10()
